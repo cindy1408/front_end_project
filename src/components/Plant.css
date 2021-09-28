@@ -1,0 +1,15 @@
+.plant img {
+    width: 20em;
+    height: auto;
+    margin: 1em;
+}
+
+.plant {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    border-top: solid 2px #52796f;
+    border-bottom: solid 2px #52796f; 
+}

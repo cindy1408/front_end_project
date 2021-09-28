@@ -1,23 +1,33 @@
-import Plant from "./Plant"
+import Plant from "./Plant";
+import './PlantList.css'
 
-var fiddle = './fiddle.jpg';
+var fiddle = 'fiddle.jpg';
 var anthurium ='anthurium.jpg';
-var kentia = 'kentiaPalm';
-var cactus = '.img/Cactus';
-var mahonganyFern = '.img/MahoganyFern';
-var birdsOfParadise = '.img/birdsofparadise';
-var lemonTree = '.img/LemonTree';
+var kentia = 'kentiaPalm.jpeg';
+var cactus = 'cactus.jpg';
+var mahonganyFern = 'mahoganyFern.jpg';
+var birdsOfParadise = 'birdsOfParadise.jpg';
+var lemonTree = 'lemonTree.jpg';
+var snakePlant = 'snakePlant.jpeg';
+var mediteranean = 'mediteraneanFanPalm.jpg';
+var bayTree = 'bayTree.jpg';
+var commonBox = 'commonBox.jpeg';
 
-let plants = [fiddle, anthurium, kentia, cactus, mahonganyFern, birdsOfParadise, lemonTree]
+let plants = [fiddle, anthurium, kentia, cactus, mahonganyFern, birdsOfParadise, lemonTree, snakePlant, mediteranean, bayTree, commonBox]
 
 const PlantList = (props) => {
-    let i = 0
-    const plantComponents = props.plants.map(plant => {
-        return <Plant plant={plant} image={plants[i]} />
-    })    
-    i++;
+
+    let plantComponents = [];
+
+    for(let i = 0; i < props.plants.length; i++){
+        let plant = props.plants[i]
+        let plantImage = plants[i]
+        let plantComponent = <Plant plant={plant} image={plantImage} />
+        plantComponents.push(plantComponent)
+    }
+
     return (
-        <div className="plant">
+        <div className="plantComponent">
             {plantComponents}
         </div>
     )

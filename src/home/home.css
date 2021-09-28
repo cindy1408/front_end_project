@@ -1,2 +1,10 @@
-.home{ background-image: url("scott-webb-oRWRlTgBrPo-unsplash.jpg")
+.home{ 
+    background-position: center;
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 75%;
+    background-image: url(../Resources/scott-webb-oRWRlTgBrPo-unsplash.jpg);
 }

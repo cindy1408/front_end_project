@@ -1,6 +1,5 @@
 import React from 'react'
-import PlantsContainer from '../containers/PlantsContainer'
-import { Link, Redirect } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 export default function Home(props) {
     return (

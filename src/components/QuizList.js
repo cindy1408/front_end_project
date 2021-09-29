@@ -1,4 +1,4 @@
-// import Quiz from './components/Quiz';
+import Quiz from './Quiz';
 
 const QuizList = (props) => {
     var quizQuestions = [
@@ -21,17 +21,13 @@ const QuizList = (props) => {
         let eachSetAnswer = quizAnswers[i];
         console.log(eachQuiz)
         console.log(eachSetAnswer)
-        let quizComponent = <Quiz questions={eachQuiz} />
-        for(let j=0; j<eachSetAnswer.length; j++){
-            let eachAnswer = <EachAnswer />
-        }
+        let quizComponent = <Quiz questions={eachQuiz} setAnswers={eachSetAnswer}/>
         quizComponents.push(quizComponent);
     }
 
     return (
         <div>
             {quizComponents}
-            {eachAnswer}
         </div>
     )
 }

@@ -20,15 +20,13 @@ const QuizList = (props) => {
     for(let i=0; i < quizQuestions.length; i++){
         let eachQuiz = quizQuestions[i];
         let eachSetAnswer = quizAnswers[i];
-        console.log(eachQuiz)
-        console.log(eachSetAnswer)
-        let quizComponent = <Quiz questions={eachQuiz} setAnswers={eachSetAnswer}/>
+        let quizComponent = <Quiz questions={eachQuiz} setAnswers={eachSetAnswer} questionNum={props.questionNum} nextQuestion={props.nextQuestion}/>
         quizComponents.push(quizComponent);
     }
 
     return (
         <div className='quizPage'>
-            {quizComponents}
+            {quizComponents[props.questionNum]}
         </div>
     )
 }

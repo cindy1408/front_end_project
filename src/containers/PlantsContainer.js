@@ -1,6 +1,5 @@
 import React from 'react';
 import PlantList from '../components/PlantList';
-
 class PlantsContainer extends React.Component {
     constructor(props){
         super(props);

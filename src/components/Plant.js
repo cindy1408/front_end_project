@@ -4,7 +4,7 @@ var path = process.env.PUBLIC_URL;
 
 const Plant = (props) => {
     return (
-        <div className='plant'>
+        <div className='plant' id={props.plant.name}>
             <div className='plantInfo'>
                 <p>Name: <b>{props.plant.name}</b></p>
                 <p>Latin Name: {props.plant.latinName}</p>

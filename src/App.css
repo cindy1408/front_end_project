@@ -1,9 +1,7 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
 
 
-.App {
+/* .App {
   background-color: #dad7cd;
   min-height: 100vh;
   display: flex;
@@ -11,5 +9,115 @@
   align-items: flex-end;
   justify-content: flex-end;
   font-size: calc(10px + 2vmin);
+  color: #344e41; 
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('./Resources/scott-webb-oRWRlTgBrPo-unsplash.jpg');
+  background-position: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+} */
+
+.Background{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('./Resources/scott-webb-oRWRlTgBrPo-unsplash.jpg');
+  background-position: auto;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-attachment: scroll;
+  text-align: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Oswald";
+}
+
+.left {
+  width: 100%;
+  height: 500px;
+  background-color: #a3b18a;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+  padding:100px;
+  position:relative;
+  left: 0;
+  top:0;
+}
+.right {
+  width: 100%;
+  height: 350px;
+  background-color: #588157;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  right: 70px;
+
+}
+.left h1 {
+  font-size: 150px;
+  font-weight: strong;
+  color: white;
+}
+
+.left p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.right p {
+  margin: 20px 0;
+  font-weight: 500;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+.right a {
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: white;
   color: #344e41;
+  padding: 20px 30px;
+  display: inline-block;
+  letter-spacing: 2px;
+  font-weight: 500 ;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+    margin: 0 20px;
+  }
+  .left {
+    width: 100%;
+    height: 400px;
+  }
+  .right {
+    width: 90%;
+    margin: 0;
+    margin-top: -100px;
+  }
 }

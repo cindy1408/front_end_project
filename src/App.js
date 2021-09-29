@@ -11,7 +11,7 @@ function App() {
       <div className="Background">
         <div className="left">
           <h1>BUD.DY</h1>
-          <p>—A short introduction to botony</p>
+          <p>—A short introduction to botany</p>
           </div>
         <div className="right">
           <div className="content">

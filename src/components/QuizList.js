@@ -1,4 +1,5 @@
 import Quiz from './Quiz';
+import './QuizList.css';
 
 const QuizList = (props) => {
     var quizQuestions = [
@@ -26,7 +27,7 @@ const QuizList = (props) => {
     }
 
     return (
-        <div>
+        <div className='quizPage'>
             {quizComponents}
         </div>
     )

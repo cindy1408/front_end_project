@@ -1,0 +1,22 @@
+.question {
+    border: 1px solid black;
+
+}
+
+.quizCard{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #a3b18a;
+    background-color: #dad7cd;
+    width: 50%;
+    margin: 2em;
+}
+
+.answers {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+}

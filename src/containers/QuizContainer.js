@@ -1,6 +1,7 @@
 import React from 'react';
 import Quiz from '../components/Quiz';
 import QuizList from '../components/QuizList';
+import StartQuiz from '../components/StartQuiz';
 class QuizContainer extends React.Component {
     constructor(props) {
         super(props);
@@ -8,6 +9,7 @@ class QuizContainer extends React.Component {
         this.state = {
             loaded: false,
             userId: null,
+            questionNum: 0, 
             quizResult: {
                 userExperience: null,
                 plantExperience: null,
@@ -17,11 +19,17 @@ class QuizContainer extends React.Component {
                 plantId_3: 0
             }
         }
+        this.nextQuestion = this.nextQuestion.bind(this);
     }
 
     // componentDidMount(){
     //     this.getQuizResult;
     // }
+
+    nextQuestion(){
+        let i = this.state.questionNum;
+        this.setState({questionNum: i+1})
+    }
 
     startQuiz() {
         fetch("http://localhost:8080/quizResults", {
@@ -81,11 +89,12 @@ class QuizContainer extends React.Component {
 
     }
 
+
     render(){
         return (
             <div>
-                {/* handleNewUser={this.state.userId}  */}
-                <QuizList />
+                {/* <StartQuiz questionNum={this.state.questionNum} nextQuestion={this.nextQuestion} startQuiz={this.startQuiz}/> */}
+                <QuizList questionNum={this.state.questionNum} nextQuestion={this.nextQuestion} />
             </div>
         )
     }

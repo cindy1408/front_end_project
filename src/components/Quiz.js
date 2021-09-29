@@ -4,7 +4,7 @@ import './Quiz.css';
 
 export default function Quiz(props) {
     let eachQuestionComponent = <div>
-                                    <h4>{props.questions}</h4>       
+                                    <h3>{props.questions}</h3>       
                                 </div>
     let quizComponents = [];
     let quizAnswerComponents = [];
@@ -12,7 +12,7 @@ export default function Quiz(props) {
     
     for(let i=0; i < props.setAnswers.length; i++){ 
         let eachAnswer = props.setAnswers[i];
-        let quizAnswerComponent = <EachQuizAnswer answer={eachAnswer}/>
+        let quizAnswerComponent = <EachQuizAnswer answer={eachAnswer} questionNum={props.questionNum} nextQuestion = {props.nextQuestion}/>
         quizAnswerComponents.push(quizAnswerComponent);
     }
 

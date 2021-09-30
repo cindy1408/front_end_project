@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from "react-router-dom"
 import NavBar from './Nav'
 import "./Home.css"
 import StartQuiz from "./StartQuiz"
@@ -8,7 +7,7 @@ const path = process.env.PUBLIC_URL;
 
 export default function Home(props) {
     return (
-    <div className="home-container" style={{ backgroundImage: `url(${path}/assets/home-bg.jpg)`,  backgroundSize: "cover", height:"100vh", backgroundPosition:"center"}}>
+    <div className="home-container" style={{ backgroundImage: `url(${path} + home-bg.jpg)`,  backgroundSize: "cover", height:"100vh", backgroundPosition:"center"}}>
       <NavBar/>
       <section>
       <div className="background" >
@@ -19,7 +18,7 @@ export default function Home(props) {
         <div className="right">
           <div className="content">
             <p>Matching you with a best Bud</p>
-           <StartQuiz />
+           <StartQuiz start={props.startQuiz}/>
           </div>
         </div>
       </div>

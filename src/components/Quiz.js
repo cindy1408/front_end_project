@@ -12,7 +12,7 @@ export default function Quiz(props) {
     
     for(let i=0; i < props.setAnswers.length; i++){ 
         let eachAnswer = props.setAnswers[i];
-        let quizAnswerComponent = <EachQuizAnswer answer={eachAnswer} questionNum={props.questionNum} nextQuestion = {props.nextQuestion}/>
+        let quizAnswerComponent = <EachQuizAnswer key={i} value={i} answer={eachAnswer} questionNum={props.questionNum} nextQuestion = {props.nextQuestion} questThree={props.questionThree}/>
         quizAnswerComponents.push(quizAnswerComponent);
     }
 

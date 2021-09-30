@@ -1,10 +1,10 @@
 import React from 'react';
 import QuizList from '../components/QuizList';
 import StartQuiz from '../components/StartQuiz';
+
 class QuizContainer extends React.Component {
     constructor(props) {
         super(props);
-
         this.state = {
             loaded: false,
             userId: null,
@@ -19,6 +19,7 @@ class QuizContainer extends React.Component {
             }
         }
         this.nextQuestion = this.nextQuestion.bind(this);
+        this.startQuiz = this.startQuiz.bind(this);
     }
 
     // componentDidMount(){
@@ -31,19 +32,24 @@ class QuizContainer extends React.Component {
     }
 
     startQuiz() {
-        fetch("http://localhost:8080/quizResults", {
+        try{
+            fetch("http://localhost:8080/buddy/quizResults", {
             method: "POST",
-            headers: { 'Content-Type': 'application/json'},
+            headers: { 'Content-Type': 'application/json'
+                     },
             body: JSON.stringify(this.state.quizResult)
         })
 
-        fetch("http://localhost:8080/quizResults")
+        fetch("http://localhost:8080/buddy/quizResults")
         .then((response) => response.json())
         .then(data => this.setState({userId: data[data.length-1].id}))
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     getQuizResult(){
-        fetch(`http://localhost:8080/quizResults/getTopThree/${this.state.userId}`)
+        fetch(`http://localhost:8080/buddy/quizResults/getTopThree/${this.state.userId}`)
         .then((response) => response.json())
         .then(data => this.setState({loaded: true, quizResult: data}))
         .catch(error => console.log(error));
@@ -54,12 +60,11 @@ class QuizContainer extends React.Component {
         updatedQuizResult.plantType = plantType;
 
         this.setState({quizResult: updatedQuizResult})
-        fetch(`http://localhost:8080/quizResults/updatePlantType/${this.state.userId}`, {
+        fetch(`http://localhost:8080/buddy/quizResults/updatePlantType/${this.state.userId}`, {
             method: "PUT", 
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(this.state.quizResult)
         })
-
     }
 
     updateQuizResultUserExp(userExperience){
@@ -67,12 +72,11 @@ class QuizContainer extends React.Component {
         updatedQuizResult.userExperience = userExperience;
 
         this.setState({quizResult: updatedQuizResult})
-        fetch(`http://localhost:8080/quizResults/updateUserExperience/${this.state.userId}`, {
+        fetch(`http://localhost:8080/buddy/quizResults/updateUserExperience/${this.state.userId}`, {
             method: "PUT", 
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(this.state.quizResult)
         })
-
     }
 
     updateQuizResultPlantExp(plantExperience){
@@ -80,7 +84,7 @@ class QuizContainer extends React.Component {
         updatedQuizResult.plantExperience = plantExperience;
 
         this.setState({quizResult: updatedQuizResult})
-        fetch(`http://localhost:8080/quizResults/updatePlantExperience${this.state.userId}`, {
+        fetch(`http://localhost:8080/buddy/quizResults/updatePlantExperience${this.state.userId}`, {
             method: "PUT", 
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(this.state.quizResult)
@@ -90,7 +94,7 @@ class QuizContainer extends React.Component {
     render(){
         return (
             <div>
-                {/* <StartQuiz questionNum={this.state.questionNum} nextQuestion={this.nextQuestion} startQuiz={this.startQuiz}/> */}
+                <StartQuiz questionNum={this.state.questionNum} nextQuestion={this.nextQuestion} startQuiz={this.startQuiz}/>
                 <QuizList questionNum={this.state.questionNum} nextQuestion={this.nextQuestion} />
             </div>
         )

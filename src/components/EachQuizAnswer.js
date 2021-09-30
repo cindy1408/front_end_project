@@ -1,21 +1,18 @@
 import React from 'react';
 import './EachQuizAnswer.css';
-import { Link } from "react-router-dom";
-import Results from './Results';
+import { useHistory } from 'react-router-dom'
 
 export default function EachQuizAnswer(props) {
-
-    function finishedQuiz(){
-        <Link to='./results'>Finished!</Link>
-    }
+    const history = useHistory();
 
     return (
         <div className='answerOptions'>
             <button type="button" onClick={() => {
                     if(props.questionNum < 2){
                         props.nextQuestion()
-                        }
-                        finishedQuiz();
+                        } else {
+                            history.push(`/results`);
+                        }                      
                     }               
             }><h4>{props.answer}</h4></button>         
         </div>

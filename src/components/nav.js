@@ -7,7 +7,7 @@ function Navbar() {
     <ul>
     <li><a href="#">Home</a></li>
     <li><a href="#">Quiz</a></li>
-    <li><a href="#">About</a></li>
+    <li><a href="#">Plants</a></li>
     </ul>
 
         // <nav className="navbar navbar-expand-lg navbar-light">

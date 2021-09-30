@@ -15,6 +15,7 @@ export default function StartQuiz(props) {
                 history.push('/quiz');
             }
             }>Start Quiz!</button>
+
         </div>
     )
 }

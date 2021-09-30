@@ -5,14 +5,16 @@ const QuizList = (props) => {
     var quizQuestions = [
         "What level gardener would you count yourself as?", 
         "How much effort are you looking to put in?", 
-        "Will your new budDy be living inside or outside?"
+        "Will your new budDy be living inside or outside?", 
+        "FINSIHED"
     ]
 
     var quizAnswers = [
         ["Total Beginner", "Intermediate", "Expert"], 
         ["Almost no effort, the plant should practically look after itself", 
         "A medium amount of effort, I need to feel needed by the plant", "I want a challenge"], 
-        ["Inside! I'm looking for a new roommate", "Outside, where plants belong"]     
+        ["Inside! I'm looking for a new roommate", "Outside, where plants belong"], 
+        []     
     ]
 
     let quizComponents = [];

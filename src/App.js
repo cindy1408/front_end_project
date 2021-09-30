@@ -4,7 +4,6 @@ import Home from './components/Home';
 import { Route, Switch } from 'react-router-dom';
 import Error from './components/Error';
 import QuizContainer from './containers/QuizContainer';
-import QuizList from './components/QuizList';
 import StartQuiz from './components/StartQuiz';
 import Results from './components/Results';
 

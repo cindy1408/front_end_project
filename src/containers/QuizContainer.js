@@ -1,5 +1,4 @@
 import React from 'react';
-import Quiz from '../components/Quiz';
 import QuizList from '../components/QuizList';
 import StartQuiz from '../components/StartQuiz';
 class QuizContainer extends React.Component {
@@ -88,8 +87,6 @@ class QuizContainer extends React.Component {
         })
 
     }
-
-
     render(){
         return (
             <div>

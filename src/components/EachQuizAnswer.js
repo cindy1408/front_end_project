@@ -8,7 +8,8 @@ export default function EachQuizAnswer(props) {
     return (
         <div className='answerOptions'>
             <button type="button" onClick={() => {
-                    if(props.questionNum < 2){
+                    if(props.questionNum == 0 && props.value == 0){
+                        props.questThree("Indoor")
                         props.nextQuestion()
                         } else {
                             history.push(`/results`);

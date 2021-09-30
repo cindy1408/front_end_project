@@ -22,7 +22,7 @@ const QuizList = (props) => {
     for(let i=0; i < quizQuestions.length; i++){
         let eachQuiz = quizQuestions[i];
         let eachSetAnswer = quizAnswers[i];
-        let quizComponent = <Quiz questions={eachQuiz} setAnswers={eachSetAnswer} questionNum={props.questionNum} nextQuestion={props.nextQuestion}/>
+        let quizComponent = <Quiz key={i} questions={eachQuiz} setAnswers={eachSetAnswer} questionNum={props.questionNum} nextQuestion={props.nextQuestion} questionThree={props.questionThree}/>
         quizComponents.push(quizComponent);
     }
 

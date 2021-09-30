@@ -1,5 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+
 .question {
-    border: 1px solid black;
+    border: 1px solid #dad7cd;
+    font-family: "Oswald";
+    color: #344e34;
 
 }
 
@@ -8,9 +12,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 5px solid #a3b18a;
+    border-radius: 5px;
+    border: 8px solid #a3b18a;
     background-color: #dad7cd;
-    width: 50%;
+    width: auto;
     margin: 2em;
 }
 
@@ -19,4 +24,17 @@
     flex-direction: row; 
     align-items: center;
     justify-content: center;
+    font-family: "Oswald";
 }
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 720px) {
+    .quizCard{
+      width: 50%;
+    }
+
+    .answers{
+        width:50%;
+        flex-direction: column;
+    }
+  }

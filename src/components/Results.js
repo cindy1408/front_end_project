@@ -22,7 +22,7 @@ export default function Results() {
         </main>
         <footer class="page-footer">
             <div class="content">
-                <h3>Have a Bud.dy day!</h3>
+                <h3>Have a Bud.dy day! <button class="">Sign In / Register</button></h3>
             </div>
          </footer>
     </div>  

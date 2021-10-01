@@ -18,10 +18,11 @@ export default function EachQuizAnswer(props) {
               props.nextQuestion()
             
         } else if (props.questionNum == 0 && props.value == 1){
-            // props.userExperience("Intermediate");
+            dispatch(updateUserExperience({choice: "Intermediate"}))
             props.nextQuestion();
             
         } else if (props.questionNum == 0 && props.value == 2){
+            dispatch(updateUserExperience({choice: "Advanced"}))
             // props.userExperience("Advance");
             props.nextQuestion();
         } else if(props.questionNum == 1 && props.value == 0){
@@ -43,13 +44,11 @@ export default function EachQuizAnswer(props) {
     }
 
     return (
-        return (
+
         <div className='answerOptions'>
             <button type="button" onClick={() => {
                     if(props.questionNum == 0 && props.value == 0){
-                        dispatch(updateUserExperience({choice: "Beginner"}));
-
-                        // props.questThree("Indoor")
+                        dispatch(updateUserExperience({choice: "Beginner"}));            
                         props.nextQuestion()
                         } else {
                             dispatch(updateQuizResult({userId:userId, quizResult: quizResult}));
@@ -58,7 +57,7 @@ export default function EachQuizAnswer(props) {
                     }               
             }><h4>{props.answer}</h4></button>         
 
-        </div>
+        </div>  
     )
 }
 

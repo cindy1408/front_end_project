@@ -13,7 +13,6 @@ export const updateQuizResult = createAsyncThunk(
     }
 )
 
-
 export const updateQuizSlice = createSlice({
     name: 'quizResult',
     initialState: {
@@ -22,7 +21,7 @@ export const updateQuizSlice = createSlice({
         plantType: null,
         plantId_1: 0,
         plantId_2: 0,
-        plantId_3: 0
+        plantId_3: 0, 
     },
 
     reducers: {
@@ -33,7 +32,7 @@ export const updateQuizSlice = createSlice({
                 plantType: null,
                 plantId_1: 0,
                 plantId_2: 0,
-                plantId_3: 0
+                plantId_3: 0, 
             }
             return newResult;
         }

@@ -3,7 +3,7 @@ import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 export const getUserId = createAsyncThunk(
     'getUserId',
     async() => {
-        const resp = await fetch("http://localhost:8082/buddy/quizResults");
+        const resp = await fetch("http://localhost:8080/buddy/quizResults");
         if (resp.ok){
             const data = await resp.json();
             const userId = data[data.length-1].id;
@@ -23,7 +23,7 @@ export const startQuiz = createAsyncThunk(
             plantId_3: 0
         }
 
-        fetch("http://localhost:8082/buddy/quizResults", {
+        fetch("http://localhost:8080/buddy/quizResults", {
             method: "POST",
             headers: { 'Content-Type': 'application/json'
                         },

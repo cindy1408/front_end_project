@@ -20,7 +20,7 @@ class QuizContainer extends React.Component {
         console.log(this.props.userId)
 
         this.nextQuestion = this.nextQuestion.bind(this);
-        this.updateQuizResultPlantType = this.updateQuizResultPlantType.bind(this);
+        // this.updateQuizResultPlantType = this.updateQuizResultPlantType.bind(this);
     }
 
     nextQuestion(){
@@ -28,17 +28,17 @@ class QuizContainer extends React.Component {
         this.setState({questionNum: i+1})
     }
 
-    updateQuizResultPlantType(plantType){
-        const updatedQuizResult = this.state.quizResult;
-        updatedQuizResult.plantType = plantType;
+    // updateQuizResultPlantType(plantType){
+    //     const updatedQuizResult = this.state.quizResult;
+    //     updatedQuizResult.plantType = plantType;
 
-        this.setState({quizResult: updatedQuizResult})
-        fetch(`http://localhost:8080/buddy/quizResults/updatePlantType/${this.props.userId}`, {
-            method: "PUT", 
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(this.props.quizResult)
-        })
-    }
+    //     this.setState({quizResult: updatedQuizResult})
+    //     fetch(`http://localhost:8080/buddy/quizResults/updatePlantType/${this.props.userId}`, {
+    //         method: "PUT", 
+    //         headers: {'Content-Type': 'application/json'},
+    //         body: JSON.stringify(this.props.quizResult)
+    //     })
+    // }
     
     render(){
         const userId = this.state.userId;

@@ -10,7 +10,6 @@ export default function StartQuiz(props) {
         <div>
             <button onClick={() => {
                 dispatch(startQuiz());
-                // props.start();
                 history.push('/quiz');
                 dispatch(getUserId());
             }

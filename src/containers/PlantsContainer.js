@@ -8,14 +8,13 @@ class PlantsContainer extends React.Component {
             plants: []
         }
     }
-
     componentDidMount(){
         fetch("http://localhost:8080/buddy/plants")
         .then((response) => response.json())
         .then(data => this.setState({plants: data, loaded: true}))
         .catch(error => console.log(error))
     }
-
+    
     render(){
         return (
             <div>

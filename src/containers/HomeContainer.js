@@ -1,5 +1,4 @@
 import React from 'react';
-import QuizList from '../components/QuizList';
 import Home from '../components/Home';
 import QuizContainer from '../containers/QuizContainer';
 
@@ -10,9 +9,18 @@ class HomeContainer extends React.Component {
             loaded: false,
             userId: 0,
             questionNum: 0, 
+            quizResult: {
+                userExperience: null,
+                plantExperience: null,
+                plantType: null,
+                plantId_1: 0,
+                plantId_2: 0,
+                plantId_3: 0
+            }
         }
         this.nextQuestion = this.nextQuestion.bind(this);
         this.startQuiz = this.startQuiz.bind(this);
+        this.updateQuizResultUserExp = this.updateQuizResultUserExp.bind(this);
     }
 
     // componentDidMount(){
@@ -31,11 +39,13 @@ class HomeContainer extends React.Component {
             headers: { 'Content-Type': 'application/json'
                      },
             body: JSON.stringify(this.state.quizResult)
-        })
-
-        fetch("http://localhost:8080/buddy/quizResults")
-        .then((response) => response.json())
-        .then(data => this.setState({userId: data[data.length-1].id}))
+        }) } catch (error) {
+            console.log(error)
+        }
+        try{
+            fetch("http://localhost:8080/buddy/quizResults")
+            .then((response) => response.json())
+            .then(data => this.setState({userId: data[data.length-1].id}))
         } catch (error) {
             console.log(error);
         }
@@ -86,11 +96,18 @@ class HomeContainer extends React.Component {
 
 
     render(){
-
-        <QuizContainer 
-            userId={this.state.userId} 
-            quizResult={this.state.quizResult} />
-
+    
+        <div>
+            <QuizContainer 
+                userId={this.state.userId} 
+                quizResult={this.state.quizResult}
+                userExperience={this.updateQuizResultUserExp} />
+{/*         
+            <QuizList 
+                userId={this.state.userId} 
+                quizResult={this.state.quizResult}
+                userExperience={this.updateQuizResultUserExp} /> */}
+        </div>
         return (
             <div>
                 <Home startQuiz={this.startQuiz} />

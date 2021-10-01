@@ -1,6 +1,5 @@
 import './App.css';
 import PlantsContainer from './containers/PlantsContainer'
-import Home from './components/Home';
 import HomeContainer from './containers/HomeContainer'
 import { Route, Switch } from 'react-router-dom';
 import Error from './components/Error';

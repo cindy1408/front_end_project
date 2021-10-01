@@ -9,9 +9,11 @@
 
 button {
     width: 100%;
-    height: 100%;
+    height: 200px;
     min-width:15em;
     max-height: 5em;
     margin: 1em;
     color: #344e34;
+    background-color: #a3b18a;
+    border-color: #344e34;
 }

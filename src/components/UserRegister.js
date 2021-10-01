@@ -50,24 +50,31 @@ const NewUser = (props) => {
     })
 
     return(
-        <div>
-            <form onSubmit={onUserSubmit}>
+        <form className="background" onSubmit={onUserSubmit}>
+            <div className="container">
+                <h1> Sign up now! </h1>
+            <div className="label">
+           
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" value={username} onChange={onUsernameChange} />
             <label for="email">Email:</label>
             <input type="text" id="email" name="email" value={email} onChange={onEmailChange} />
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" value={password} onChange={onPasswordChange} />
-            <input type="submit" value="Register" onClick={onClick}/>
-         </form>
+            <input className="submit" type="submit" value="Register" onClick={onClick}/>
+
+            </div>
+           
 
          {showResultId ? 
          <div>
-             Thank you for registering your account!  
-             Here's your quiz result ID where your responses are saved:
+             quiz result ID:
              <p>{quizResultID}</p></div> 
          : null}
+
+        
         </div>
+        </form>
       
     )
 

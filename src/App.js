@@ -6,6 +6,7 @@ import Error from './components/Error';
 import QuizContainer from './containers/QuizContainer';
 import StartQuiz from './components/StartQuiz';
 import Results from './components/Results';
+import UserContainer from './containers/UserContainer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/quiz" component={QuizContainer} />
         <Route path="/plants" component={PlantsContainer} />
         <Route path="/results" component={Results} />
+        <Route path="/register" component={UserContainer} />
         <Route component={Error} />
       </Switch>
     </div>

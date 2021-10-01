@@ -50,6 +50,8 @@ class QuizContainer extends React.Component {
                     questionNum={this.state.questionNum} 
                     nextQuestion={this.nextQuestion} 
                     questionThree={this.updateQuizResultPlantType} 
+                    userExperience={this.props.userExperience}
+                    userId={this.props.userId}
                     />
             </div>
         )

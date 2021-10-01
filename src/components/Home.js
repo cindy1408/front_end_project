@@ -1,13 +1,16 @@
-import React from 'react'
-import NavBar from './Nav'
-import "./Home.css"
-import StartQuiz from "./StartQuiz"
+import React from 'react';
+import NavBar from './Nav';
+import "./Home.css";
+import StartQuiz from "./StartQuiz";
+var backgroundPlantImage = 'home-bg.jpg';
 
 const path = process.env.PUBLIC_URL;
 
 export default function Home(props) {
     return (
-    <div className="home-container" style={{ backgroundImage: `url(${path}/assets/home-bg.jpg)`,  backgroundSize: "cover", height:"100vh", backgroundPosition:"center"}}>
+
+    <div className="home-container" style={{ backgroundImage: `url(${backgroundPlantImage})`,  backgroundSize: "cover", height:"100vh", backgroundPosition:"center"}}>
+
       <NavBar/>
       <section>
       <div className="background" >

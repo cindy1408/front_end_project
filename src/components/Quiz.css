@@ -15,7 +15,7 @@
     border-radius: 5px;
     border: 8px solid #a3b18a;
     background-color: #dad7cd;
-    width: auto;
+    height: 200px;
     margin: 2em;
 }
 
@@ -31,6 +31,7 @@
 @media screen and (max-width: 720px) {
     .quizCard{
       width: 50%;
+      height: 400px;
     }
 
     .answers{

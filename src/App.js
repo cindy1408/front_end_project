@@ -7,6 +7,7 @@ import QuizContainer from './containers/QuizContainer';
 import StartQuiz from './components/StartQuiz';
 import Results from './components/Results';
 import UserContainer from './containers/UserContainer';
+import oldUser from './components/SignIn'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/plants" component={PlantsContainer} />
         <Route path="/results" component={Results} />
         <Route path="/register" component={UserContainer} />
+        <Route path="/signin" component={oldUser} />
         <Route component={Error} />
       </Switch>
     </div>

@@ -1,6 +1,7 @@
 import {useState} from "react";
 import {useSelector} from "react-redux"
 import "./UserRegister.css"
+import { Link } from "react-router-dom";
 
 const NewUser = (props) => {
     const userExperience = useSelector(state => state.quizResult.userExperience);
@@ -8,13 +9,6 @@ const NewUser = (props) => {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
-    const [showResultId, setShowResultId] = useState(false);
-    const onClick = () => {
-        if( username != "" && email != "" && password != "" ){
-            setShowResultId(true)
-        }
-    }
 
     const onUsernameChange = ((evt) => {
         evt.preventDefault();
@@ -55,24 +49,24 @@ const NewUser = (props) => {
                 <h1> Sign up now! </h1>
             <div className="label">
            
-            <label for="username">Username:</label>
+            <label for="username">Username  
             <input type="text" id="username" name="username" value={username} onChange={onUsernameChange} />
-            <label for="email">Email:</label>
+            </label>
+           
+            <label for="email">Email  
             <input type="text" id="email" name="email" value={email} onChange={onEmailChange} />
-            <label for="password">Password:</label>
+            </label>
+           
+            <label for="password">Password  
             <input type="password" id="password" name="password" value={password} onChange={onPasswordChange} />
-            <input className="submit" type="submit" value="Register" onClick={onClick}/>
-
+            </label>
             </div>
            
-
-         {showResultId ? 
-         <div>
-             quiz result ID:
-             <p>{quizResultID}</p></div> 
-         : null}
-
-        
+            <input className="submit" type="submit" value="Register"/>
+            <div className="Signin">
+                <h6><Link to="./signin">Already have an account? Sign in now</Link></h6>
+            </div>
+            
         </div>
         </form>
       

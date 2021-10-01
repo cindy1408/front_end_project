@@ -43,7 +43,6 @@ export default function EachQuizAnswer(props) {
     }
 
     return (
-        return (
         <div className='answerOptions'>
             <button type="button" onClick={() => {
                     if(props.questionNum == 0 && props.value == 0){

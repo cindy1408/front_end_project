@@ -6,15 +6,12 @@ import { updateUserExperience,updateQuizResult } from '../redux/updateQuizSlice'
 
 export default function EachQuizAnswer(props) {
     const history = useHistory();
-
     const dispatch = useDispatch();
     const userId = useSelector(state => state.userId);
     const quizResult = useSelector(state => state.quizResult);
     function postUserResponse(){
         if(props.questionNum == 0 && props.value == 0){
              dispatch(updateUserExperience({choice: "Beginner"}));
-
-              // props.questThree("Indoor")
               props.nextQuestion()
             
         } else if (props.questionNum == 0 && props.value == 1){
@@ -23,7 +20,6 @@ export default function EachQuizAnswer(props) {
             
         } else if (props.questionNum == 0 && props.value == 2){
             dispatch(updateUserExperience({choice: "Advanced"}))
-            // props.userExperience("Advance");
             props.nextQuestion();
         } else if(props.questionNum == 1 && props.value == 0){
             
@@ -44,7 +40,6 @@ export default function EachQuizAnswer(props) {
     }
 
     return (
-
         <div className='answerOptions'>
             <button type="button" onClick={() => {
                     if(props.questionNum == 0 && props.value == 0){

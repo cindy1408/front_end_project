@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+
+.background{
+    background-image: url('../Resources/scott-webb-oRWRlTgBrPo-unsplash.jpg');
+    background-position: auto;
+    background-repeat: no repeat;
+    background-size:cover;
+    background-attachment:scroll;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    width: 100%;
+    max-width:400px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 8px solid #a3b18a;
+    background-color: #dad7cd;
+    height: 500px;
+    margin: 2em;
+    font-size: 20px;
+}
+
+.label{
+    width:100%;
+    height: fit-content;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Oswald;
+    color: #344e34;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+
+}
+
+.container h1{
+    text-transform: uppercase;
+    font-family: Oswald;
+    font-weight: lighter;
+    color: #344e34;
+}
+
+.submit{
+    font-family: Oswald;
+    font-weight: lighter;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: #a3b18a;
+    width:30%;
+    height:10%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit:hover {
+    background-color: #3a5a40;
+    color: #fff;
+  }
+
+.Signin{
+    color: #344e34;
+    margin-top: 10px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -22,7 +22,7 @@ const PlantList = (props) => {
     for(let i = 0; i < props.plants.length; i++){
         let plant = props.plants[i]
         let plantImage = plants[i]
-        let plantComponent = <Plant plant={plant} image={plantImage} />
+        let plantComponent = <Plant id={plant.id} plant={plant} image={plantImage} />
         plantComponents.push(plantComponent)
     }
 

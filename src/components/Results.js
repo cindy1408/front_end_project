@@ -1,6 +1,7 @@
 import React from 'react'
 import './Results.css'
 import demo from "./demoimage.jpg" 
+import { Link } from "react-router-dom";
 
 export default function Results() {
     return (   
@@ -22,7 +23,7 @@ export default function Results() {
         </main>
         <footer class="page-footer">
             <div class="content">
-                <h3>Have a Bud.dy day!</h3>
+                <h3>Have a Bud.dy day! <Link to="/register"><button class="">Sign In / Register</button></Link> </h3>
             </div>
          </footer>
     </div>  

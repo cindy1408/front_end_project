@@ -6,6 +6,7 @@ class QuizContainer extends React.Component {
         this.state = {
             loaded: false,
             questionNum: 0,
+            userId: this.props.userId,
             quizResult: {
                 userExperience: null,
                 plantExperience: null,
@@ -15,6 +16,9 @@ class QuizContainer extends React.Component {
                 plantId_3: 0
             }
         }
+       
+        console.log(this.props.userId)
+
         this.nextQuestion = this.nextQuestion.bind(this);
         this.updateQuizResultPlantType = this.updateQuizResultPlantType.bind(this);
     }
@@ -37,7 +41,10 @@ class QuizContainer extends React.Component {
     }
     
     render(){
+        const userId = this.state.userId;
+        {  console.log("quiz container" + this.state.userId)}
         return (
+          
             <div>
                 <QuizList 
                     questionNum={this.state.questionNum} 

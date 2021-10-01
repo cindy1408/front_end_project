@@ -4,13 +4,22 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import {Provider} from 'react-redux';
+import store from './redux/store';
+
+// const enhancers = compose(
+//   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+//   );
+// const store =createStore(allReducers, enhancers);
 
 ReactDOM.render(
-  // <React.StrictMode>
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  // </React.StrictMode>
+  <React.StrictMode>
+    <Provider store={store}>
+       <BrowserRouter>
+          <App />
+      </BrowserRouter>
+   </Provider>
+</React.StrictMode>,
   document.getElementById('root')
 );
 

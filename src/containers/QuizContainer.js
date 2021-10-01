@@ -7,7 +7,7 @@ class QuizContainer extends React.Component {
             loaded: false,
             questionNum: 0
         }
-       
+    this.nextQuestion = this.nextQuestion.bind(this);
     }
 
     nextQuestion(){

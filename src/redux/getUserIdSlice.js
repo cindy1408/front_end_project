@@ -22,7 +22,6 @@ export const startQuiz = createAsyncThunk(
             plantId_2: 0,
             plantId_3: 0
         }
-
         fetch("http://localhost:8080/buddy/quizResults", {
             method: "POST",
             headers: { 'Content-Type': 'application/json'

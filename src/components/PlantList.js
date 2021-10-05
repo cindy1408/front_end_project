@@ -16,7 +16,6 @@ var commonBox = 'commonBox.jpeg';
 let plants = [fiddle, anthurium, kentia, cactus, mahonganyFern, birdsOfParadise, lemonTree, snakePlant, mediteranean, bayTree, commonBox]
 
 const PlantList = (props) => {
-
     let plantComponents = [];
 
     for(let i = 0; i < props.plants.length; i++){
@@ -28,6 +27,7 @@ const PlantList = (props) => {
 
     return (
         <div className="plantComponent">
+            <h1>Find your potential BUD.DY Plant!</h1>
             {plantComponents}
         </div>
     )

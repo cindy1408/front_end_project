@@ -4,8 +4,6 @@ import "./Home.css";
 import StartQuiz from "./StartQuiz";
 var backgroundPlantImage = 'home-bg.jpg';
 
-const path = process.env.PUBLIC_URL;
-
 export default function Home(props) {
     return (
 
@@ -21,7 +19,7 @@ export default function Home(props) {
         <div className="right">
           <div className="content">
             <p>Matching you with a best Bud</p>
-           <StartQuiz start={props.startQuiz}/>
+           <StartQuiz />
           </div>
         </div>
       </div>

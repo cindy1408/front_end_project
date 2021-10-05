@@ -1,9 +1,11 @@
 import React from 'react'
 import './Results.css'
-import demo from "./demoimage.jpg" 
 import { Link } from "react-router-dom";
+var plant = 'birdsOfParadise.jpg';
+
 
 export default function Results() {
+    var path = process.env.PUBLIC_URL;
     return (   
     <div class="grid">
         <header class="page-header">
@@ -14,11 +16,15 @@ export default function Results() {
         <aside class="page-rightbar">
             <div class="content">
                 <p>Facts</p>
+                <p>- also known as Crane flower</p>
+                <p>- there are 5 species</p>
+                <p>- native to Southern Afria</p>
+                <p>- they bloom from September to May</p>
             </div>
         </aside>
         <main class="page-main">
             <div class="content">
-                <img src ={demo} alt="plant photo result" class="responsive"/>
+                <img src ={path + plant} alt="plant photo result" className="responsive"></img>
             </div>
         </main>
         <footer class="page-footer">

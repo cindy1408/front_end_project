@@ -2,6 +2,7 @@ import Quiz from './Quiz';
 import './QuizList.css';
 
 const QuizList = (props) => {
+
     var quizQuestions = [
         "What level gardener would you count yourself as?", 
         "How much effort are you looking to put in?", 

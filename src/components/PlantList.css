@@ -3,4 +3,10 @@
     flex-direction: column; 
     justify-content: center;
     align-items: center;
+    background-color: #dad7cd;
+}
+
+h1{
+    margin: 1em;
+    color: #25342c;
 }

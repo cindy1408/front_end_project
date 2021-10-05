@@ -9,7 +9,7 @@ const path = process.env.PUBLIC_URL;
 export default function Home(props) {
     return (
 
-    <div className="home-container" style={{ backgroundImage: `url(${backgroundPlantImage})`,  backgroundSize: "cover", height:"100vh", backgroundPosition:"center"}}>
+    <div className="home-container">
 
       <NavBar/>
       <section>

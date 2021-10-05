@@ -16,15 +16,20 @@
     justify-content: center;
     text-align: center;
 }
-
 .background{
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-attachment: scroll;
-    text-align: center;
+  background-image: url('../Resources/scott-webb-oRWRlTgBrPo-unsplash.jpg');
+  background-position: auto;
+  background-repeat: no repeat;
+  background-size:cover;
+  background-attachment:scroll;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+    
   }
 * {
   padding: 0;
@@ -98,7 +103,7 @@ html {
 
 
 @media only screen and (max-width: 720px) {
-  .home-container {
+  .background {
     width: 50%;
     
   }
@@ -107,6 +112,7 @@ html {
     height: 400px;
   }
   .right {
-    width: 50%;
+    width: 70%;
+    height: 300px;
   }
 }

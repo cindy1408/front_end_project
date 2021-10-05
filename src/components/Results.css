@@ -75,23 +75,33 @@
       display:flex;
       flex-direction: column;
       font-weight: lighter;
+      font-size: 35px;
   }
 
-  .content button{
+  .content button {
     width: 100%;
-    height:20px;
+    height:45px;
     max-width: 200px;
-    background-color: #fff;
+    background-color: #f3f1eb;
     color: #344e34;
-    font-weight: bold;
-    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    text-transform: uppercase;
+    font-weight: 325;
+    font-size: 18px;
     border:none;
     align-items: center;
     justify-content: center;
     margin: 0px;
+    border-radius: 2px;
   }
 
   .content button:hover {
     background-color: #3a5a40;
     color: #fff;
+  }
+
+  .content h1 {
+    font-weight: lighter;
   }

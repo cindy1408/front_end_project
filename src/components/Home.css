@@ -107,6 +107,11 @@ html {
     width: 50%;
     
   }
+
+  .left p{
+    font-size: 15px;
+  }
+
   .left {
     width: 50%;
     height: 400px;

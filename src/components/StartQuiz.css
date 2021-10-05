@@ -1,3 +1,5 @@
-.button{
-   background-color: aqua;
+.quizbutton button{
+   background-color:aqua;
+   border-radius: 2px;
+   font-weight: 200;
 }

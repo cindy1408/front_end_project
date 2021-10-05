@@ -6,13 +6,13 @@ const Plant = (props) => {
     return (
         <div className='plant' id={props.plant.name}>
             <div className='plantInfo'>
-                <p>Name: <b>{props.plant.name}</b></p>
-                <p>Latin Name: {props.plant.latinName}</p>
-                <p>Type: {props.plant.plantType}</p>
-                <p>Experience: {props.plant.plantExperience}</p>
-                <p>Light Exposure: {props.plant.light}</p>
-                <p>Water Frequency: {props.plant.water}</p>
-                <p>Rating: {props.plant.rating}</p>
+                <h4>Name: {props.plant.name}</h4>
+                <p>Latin Name: <b>{props.plant.latinName}</b></p>
+                <p>Type: <b>{props.plant.plantType}</b></p>
+                <p>Experience: <b>{props.plant.plantExperience}</b></p>
+                <p>Light Exposure: <b>{props.plant.light}</b></p>
+                <p>Water Frequency: <b>{props.plant.water}</b></p>
+                <p>Rating: <b>{props.plant.rating}</b></p>
             </div>
             <img src = {path + props.image} alt='plantImage'></img>  
         </div>

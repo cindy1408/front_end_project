@@ -13,8 +13,7 @@ class PlantsContainer extends React.Component {
         .then((response) => response.json())
         .then(data => this.setState({plants: data, loaded: true}))
         .catch(error => console.log(error))
-    }
-    
+    }   
     render(){
         return (
             <div>
@@ -23,5 +22,4 @@ class PlantsContainer extends React.Component {
         )
     }
 }
-
 export default PlantsContainer;

@@ -7,6 +7,6 @@ export default configureStore({
         quizResult: updateQuizReducer,
         userId: getUserIdReducer,
         userResult: getUserIdReducer,
-        updateQuestion: updateQuestionNumber,
+        // updateQuestion: updateQuestionNumber,
     },
 });
